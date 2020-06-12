@@ -13,17 +13,18 @@ import  { fifaData }  from './fifa.js';
 (e) Winner of 2014 world cup final */
 
 // (a)
-const homeTeam = fifaData.filter((yearData) => {
+const newData = fifaData.filter((yearData) => {
         return yearData.Year === 2014 && yearData.Stage === "Final";
 })
 
-console.log(homeTeam[0]['Home Team Name']);
+console.log(newData[0]['Home Team Name']);
 // (b)
-const awayTeam = fifaData.filter((yearData) => {
-    return yearData.Year === 2014 && yearData.Stage === "Final";
-})
+console.log(newData[0]['Away Team Name']);
+// (c)
+console.log(newData[0]['Home Team Goals']);
+// (d)
+console.log(newData[0]['Away Team Goals']);
 
-console.log(awayTeam[0]['Away Team Name']);
 /* Task 2: Create a function called  getFinals that takes `data` as an argument and returns an array of objects with only finals data */
 
 function getFinals(/* code here */) {
