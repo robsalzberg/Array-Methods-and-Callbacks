@@ -24,6 +24,20 @@ console.log(newData[0]['Away Team Name']);
 console.log(newData[0]['Home Team Goals']);
 // (d)
 console.log(newData[0]['Away Team Goals']);
+// (e)
+const newDataTwo = fifaData.filter((yearData) => {
+    return yearData.Year === 2014 && yearData.Stage === "Final";      
+});
+
+const champion = ((newDataTwo)=>{
+    if(newDataTwo[0]['Home Team Goals'] > newDataTwo[0]['Away Team Goals']) {
+        return newDataTwo[0]['Home Team Name'];
+    } else {
+        return newDataTwo[0]['Away Team Name'];
+    }
+});
+
+console.log(champion(newDataTwo));
 
 /* Task 2: Create a function called  getFinals that takes `data` as an argument and returns an array of objects with only finals data */
 
